@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: rgb(190, 228, 240);
+    color: black;
+    line-height: 1.6;
+}
+
+.dark{
+    background-color: brown;
+    color: white;
+}
+
+nav{
+    background: linear-gradient(135deg, rgb(192, 147, 234));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px grey;
+}
+nav h1{
+    font-size: 30px;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 3s;
+}
+nav a:hover{
+    color: rgb(235, 20, 20);
+}
+.hero{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 8%;
+    flex-wrap: wrap;
+}
+.hero div{
+    max-width: 550px;
+}
+.hero h1{
+    font-size: 60px;
+    color: blue;
+}
+.hero h3{
+    font-size: 30px;
+    margin: 15px 0 ;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.hero img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid rgb(80, 80, 233);
+    box-shadow: 0 10px 30px rgb(18, 18, 18);
+}
+button{
+    background: linear-gradient(135deg, blue, skyblue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .4s;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+    padding: 60px 8%;
+}
+section h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: blue;
+}
+
+/* ABOUT */
+
+#about p{
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+}
+
+table{
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgb(137, 136, 136);
+}
+th{
+    background: rgb(192, 147, 234);
+    color: white;
+}
+th, td{
+    padding: 15px;
+    text-align: center;
+}
+
+/* Skills  */
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+.card{
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgb(47, 46, 46);
+    transition: .4s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card h3{
+    color: blue;
+    margin-bottom: 10px;
+}
+#skillBtn{
+    background: linear-gradient(135deg, blue, skyblue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .4s;
+    margin-top: 20px;
+}
+
+/* PROJECT */
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.project{
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgb(80, 78, 78);
+    transition: .4s;
+}
+.project:hover{
+    transform: scale(1.05);
+}
+.project h3{
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+/* CONTACT */
+form{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, textarea{
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+input:focus, textarea:focus{
+        border-color: #4f46e5;
+}
+textarea{
+    resize: none;
+    height: 150px;
+}
+
+/* FOOTER */
+footer{
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero{
+        text-align: center;
+        gap: 30px;
+    }
+    .hero h1{
+        font-size: 45px;
+    }
+    .hero h3{
+        font-size: 25px;
+    }
+    .hero img{
+        width: 250px;
+        height: 250px;;
+    }
+}
